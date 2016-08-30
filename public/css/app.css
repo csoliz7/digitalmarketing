@@ -1,0 +1,767 @@
+html {
+    font: normal 14px/20px "Helvetica Neue", Helvetica, Arial;
+    color: #444;
+    font-family: sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e4eaed;
+}
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #000;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    line-height: 1.4;
+    font-size: 2.8em;
+}
+img {
+    border-style: none;
+}
+hr {
+    border-bottom: 1px solid #000;
+    border-top: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    padding: .5em;
+}
+
+
+/* unvisited link */
+a:link {
+    color: #000;
+}
+
+/* visited link */
+a:visited {
+    color: #000;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: pink;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    overflow: auto;
+}
+.navigation {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .4em;
+    overflow: auto;
+}
+.logo {
+    padding: .2em;
+}
+.current {
+    color: rgb(67, 82, 27);
+    font-weight: 600;
+}
+a {
+    color: #000;
+}
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    overflow: auto;
+}
+.menu ul {
+    overflow: auto;
+    flex-shrink: 0;
+}
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    overflow: hidden;
+    padding: .2em;
+    flex-shrink: 0;
+}
+.menu li a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.pitch {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.pitch h2 {
+    line-height: 1.4em;
+    color: #000;
+    font-size: 1.7em;
+}
+.learn {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid green;
+    border-radius: 3px;
+    line-height: 1em;
+    cursor: pointer;
+    color: #000;
+    padding: .5em;
+    margin: .5em;
+    width: 6em;
+}
+.row {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.row p {
+    font-size: 1.5em;
+    color: #000;
+    line-height: 1.2em;
+}
+.quote {
+    padding: 0;
+    margin: 0;
+    background: rgba(228, 234, 237, 0.2);
+}
+.quote p {
+    padding: .4em;
+    font-weight: 500;
+    /*color: rgb(20, 90, 50);*/
+    color: green;
+    weight: 600;
+    line-height: 1.3em;
+}
+.paragraph {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.paragraph p {
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
+.paragraph h2 {
+    color: green;
+    display: block;
+    border-radius: .2em;
+    padding: 0 .2em 0 .2em;
+
+    line-height: 1.5em;
+}
+.paragraph h3 {
+    color: #000;
+}
+.paragraph ul li {
+    font-size: 1.2em;
+}
+
+.row h1 {
+    color: green;
+}
+
+.project {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.col-first {
+    display: flex;
+    flex-direction: column;
+        width: 50%;
+}
+.col-second {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    margin: .7em;
+    padding: .5em;
+}
+.col h2 {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border-bottom: 6px solid #000;
+}
+.col p {
+    font-size: 1.2em;
+    color: #000;
+}
+.logo h2 {
+    color: rgb(146,45,141);
+    font-size: 2.2em;
+}
+div.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:0;
+    left:0;
+    background-color: #ddd;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.94;
+    visibility: visible;
+    z-index: 1000;
+    transition: height 2s, opacity 2s, ease-in-out;
+}
+
+div.active ul {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    visibility: visible;
+    margin:0;
+    padding:0;
+
+}
+div.active li {
+    font-size: 1.5em;
+    align-content: flex-start;
+    display: block;
+    line-height: 1.5em;
+    border-bottom: 1px solid #000;
+}
+
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+
+
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
+.pure-form select,
+.pure-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]) {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+.pure-form input[type="color"] {
+    padding: 0.2em 0.5em;
+}
+
+
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
+.pure-form select:focus,
+.pure-form textarea:focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type]):focus {
+    outline: 0;
+    border-color: #129FEA;
+}
+
+.pure-form input[type="file"]:focus,
+.pure-form input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus {
+    outline: thin solid #129FEA;
+    outline: 1px auto #129FEA;
+}
+.pure-form .pure-checkbox,
+.pure-form .pure-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.pure-form input[type="text"][disabled],
+.pure-form input[type="password"][disabled],
+.pure-form input[type="email"][disabled],
+.pure-form input[type="url"][disabled],
+.pure-form input[type="date"][disabled],
+.pure-form input[type="month"][disabled],
+.pure-form input[type="time"][disabled],
+.pure-form input[type="datetime"][disabled],
+.pure-form input[type="datetime-local"][disabled],
+.pure-form input[type="week"][disabled],
+.pure-form input[type="number"][disabled],
+.pure-form input[type="search"][disabled],
+.pure-form input[type="tel"][disabled],
+.pure-form input[type="color"][disabled],
+.pure-form select[disabled],
+.pure-form textarea[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+.pure-form input:not([type])[disabled] {
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
+}
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
+    background-color: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
+.pure-form input:focus:invalid,
+.pure-form textarea:focus:invalid,
+.pure-form select:focus:invalid {
+    color: #b94a48;
+    border-color: #e9322d;
+}
+.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #e9322d;
+}
+.pure-form select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25em;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.pure-form select[multiple] {
+    height: auto;
+}
+.pure-form label {
+    margin: 0.5em 0 0.2em;
+}
+
+
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+
+/*Burger style **/
+
+.c-hamburger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 56px;
+    height: 46px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 10000;
+}
+.c-hamburger:focus {
+    outline: none;
+}
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 21px;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    background: #000;
+}
+.c-hamburger span::before, .c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    content: "";
+}
+.c-hamburger span::before {
+    top: -10px;
+}
+.c-hamburger span::after {
+    bottom: -10px;
+}
+
+/**
+ * Style 2
+ *
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+
+.c-hamburger--htx {
+    background-color: transparent;
+}
+.c-hamburger--htx span {
+    transition: background 0s 0.3s;
+}
+.c-hamburger--htx span::before, .c-hamburger--htx span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+.c-hamburger--htx span::before {
+    transition-property: top, transform;
+}
+.c-hamburger--htx span::after {
+    transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+
+.c-hamburger--htx.is-active {
+    background-color: transparent;
+}
+.c-hamburger--htx.is-active span {
+    background: none;
+}
+.c-hamburger--htx.is-active span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+.c-hamburger--htx.is-active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+.c-hamburger--htx.is-active span::before, .c-hamburger--htx.is-active span::after {
+    transition-delay: 0s, 0.3s;
+}
+
+
+@media (min-width: 100px) and (max-width: 730px) {
+    .col {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .col h2 {
+        color: #000;
+        margin: 0;
+        padding: 0;
+        display: block;
+        border-bottom: 6px solid #000;
+    }
+    .menu {
+        display: flex;
+
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 0;
+        overflow-y: hidden;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ddd;
+        width: 100%;
+        opacity: 0;
+        transition: height 2s, opacity 2s, ease-in-out;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding:0;
+        width: 30%;
+    }
+
+    .menu ul li {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        display: block;
+        border-bottom: 1px solid #000;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+    .logo {
+        z-index: 10000;
+    }
+}
+@media (min-width: 720px) and (max-width: 2500px) {
+    .c-hamburger span {
+        display: none;
+    }
+}
+@media (min-width: 730px) and (max-width: 850px) {
+    .col {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 2;
+    }
+}

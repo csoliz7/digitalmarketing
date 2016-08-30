@@ -1,0 +1,29 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+            <div class="row">
+
+                <form class="pure-form pure-form-stacked">
+
+                        <legend><h2>Send us a message</h2></legend>
+                        <label for="email">Name</label>
+                        <input id="name" type="name" placeholder="Name">
+
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="Email">
+
+                        <label for="password">Telephone</label>
+                        <input id="password" type="number" placeholder="Telephone">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" cols="50"></textarea>
+
+                        <button type="submit" class="pure-button pure-button-primary">Send Message</button>
+
+                </form>
+            </div>
+            <hr />
+
+        </div>
+{% endblock %}
